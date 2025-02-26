@@ -18,7 +18,7 @@ import {
 import { Search, Delete, Edit } from "@mui/icons-material";
 
 export default function ProfilesPage() {
-    
+
   // Estado para paginación y búsqueda
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -99,7 +99,7 @@ export default function ProfilesPage() {
           />
 
           {/* Botón de Eliminar */}
-          <Box>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
             <IconButton sx={{
                 gap: 2,
                 border: "1px solid #1a4568", 
@@ -112,13 +112,13 @@ export default function ProfilesPage() {
                 "&:focus": {
                     backgroundColor: "rgba(4, 29, 67, 0.2)", 
                 },
+            
             }}>
               <Delete />
             </IconButton>
 
             {/* Botón de editar */}
             <IconButton sx={{
-                gap: 2,
                 border: "1px solid #1a4568", 
                 borderRadius: "20px", 
                 padding: "8px", 
